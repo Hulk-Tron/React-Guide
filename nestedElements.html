@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+        <style>
+            .container {
+                color : royalblue
+            }
+            </style>
+    </head>
+    <body>
+        <div id="Nested-Element">
+        </div>
+        <script>
+        // REACT CREATE ELEMENT IS A REACT FUNCTION THATS CREATE A ELEMENT 
+        // FIRST ELEMENT KIND OF ELEMENT WE WANNA CREATE 
+        // SECOND ELEMENT ATTRIBUTE WE WANNA PASS ID IS HTML DOM ID WHERE AS KEY IS REACT SPECIFIED WHICH REACT USES TO IDENTIFIED ELEMENT DIFFRENTLY
+        // THIRD WHAT TEXT WE WANNA DISPLAY
+        var firstElement = React.createElement('h2',{id:'header-id',key:'header'},"Hello World");
+        var secondElement = React.createElement('p',{key:'paragraph'},"This is react paragraph");
+        var reactFragment = [firstElement,secondElement];
+        // REACT FRAGEMENT BECOMES THE CHILD OF SECTION 
+        var section = React.createElement('section',{className:'container'},reactFragment);
+        // WE MOUNT THE ELEMENT AS A CHILD OF HELLOWORLD 
+        // FIRST ELEMENT WE WANNA MOUNT 
+        // PARENT ELEMENT WHERE WE WANNA MOUNT 
+        ReactDOM.render(section,document.getElementById('Nested-Element'));
+        </script>
+    </body>
+</html>

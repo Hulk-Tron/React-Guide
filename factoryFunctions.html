@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+        <style>
+            .container {
+                color : red
+            }
+            </style>
+    </head>
+    <body>
+        <div id="Factory-Function">
+        </div>
+        <script>
+            // REACT HAS MANY FACTORY FUNCTION WHICH MAKE IT EASY TO CREATE ELEMENTS 
+            // REACT HAS MANY FUNCTIONS LIKE React.DOM.div() , React.DOM.span() , React.DOM.p()
+            var reactLi1 = React.DOM.li({key:'item-1'},"This is 1 Li Element")
+            var reactLi2 = React.DOM.li({key:'item-2'},"This is 2 Li Element")
+            var reactLi3 = React.DOM.li({key:'item-3'},"This is 3 Li Element")
+            var reactLi4 = React.DOM.li({key:'item-4'},"This is 4 Li Element")
+            var reactFragment = [reactLi1,reactLi2,reactLi3,reactLi4]
+            var factoryFunction = React.DOM.ul({className:'container'},reactFragment)
+            ReactDOM.render(factoryFunction,document.getElementById('Factory-Function'));
+        </script>
+    </body>
+</html>

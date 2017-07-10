@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+    </head>
+    <body>
+        <div id="helloWorld">
+        </div>
+        <script>
+        // REACT CREATE ELEMENT IS A REACT FUNCTION THATS CREATE A ELEMENT 
+        // FIRST ELEMENT KIND OF ELEMENT WE WANNA CREATE 
+        // SECOND ELEMENT ATTRIBUTE WE WANNA PASS
+        // THIRD WHAT TEXT WE WANNA DISPLAY
+        var firstElement = React.createElement('h2',{},"Hello World");
+        // WE MOUNT THE ELEMENT AS A CHILD OF HELLOWORLD 
+        // FIRST ELEMENT WE WANNA MOUNT 
+        // PARENT ELEMENT WHERE WE WANNA MOUNT 
+        ReactDOM.render(firstElement,document.getElementById('helloWorld'));
+        </script>
+    </body>
+</html>
